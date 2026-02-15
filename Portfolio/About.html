@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="About.css" />
+  <link rel="stylesheet" href="AboutMediaQuaries.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <nav id="desktop-nav">
+    <div class="logo">Ronald</div>
+    <div style="display: flex; align-items: center; gap: 2rem;">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Skills.html">Skills</a></li>
+        <li><a href="Project.html">Projects</a></li>
+        <li><a href="Testimonials.html">Testimonials</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+
+    </div>
+
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">Ronald</div>
+
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <ul>
+          <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+          <li><a href="About.html" onclick="toggleMenu()">About</a></li>
+          <li><a href="Skills.html" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="Project.html" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="Testimonials.html" onclick="toggleMenu()">Testimonials</a></li>
+          <li><a href="Contact.html" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
+      <div class="section__pic-container">
+        <img src="./assets/PhotoAi.png" alt="Profile picture" class="about-pic" />
+      </div>
+      <div class="about-details-container">
+        <div class="about-containers">
+
+        </div>
+        <div class="text-container">
+          <p>
+            <strong>Personal Background:</strong> I am a dedicated Bachelor of Science in Information Technology student
+            with a strong passion for technology and innovation. My journey is driven by a curiosity to understand the
+            hidden logic that powers modern applications.
+          </p>
+          <br>
+          <p>
+            <strong>Career Goals:</strong> I aim to become a professional Backend Developer, creating efficient,
+            scalable, and secure server-side solutions. My goal is to leverage technology to solve real-world problems
+            and contribute meaningful innovations to the industry.
+          </p>
+          <br>
+          <p>
+            <strong>Areas of Interest in IT:</strong> My technical curiosity revolves around Backend Development,
+            building robust APIs, Database Management, and System Architecture. I am also keen on exploring new Web
+            Technologies to enhance development workflows.
+          </p>
+          <div class="btn-container">
+            <button class="btn btn-color-2"
+              onclick="location.href='https://www.linkedin.com/in/ronald-sevilla-124081190/'">
+              LinkedIn Profile
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Skills.html">Skills</a></li>
+          <li><a href="Project.html">Projects</a></li>
+          <li><a href="Testimonials.html">Testimonials</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Contact Me</h3>
+        <div class="social-icons">
+          <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
+            onclick="location.href='https://www.linkedin.com/in/ronald-sevilla-124081190/'" />
+          <img src="./assets/github.png" alt="My Github profile" class="icon"
+            onclick="location.href='https://github.com/shironxiao/shironxiao'" />
+          <img src="./assets/facebook.png" alt="My facebook profile" class="icon"
+            onclick="location.href='https://www.facebook.com/shiron08/'" />
+          <img src="./assets/instagram.png" alt="My instagram profile" class="icon"
+            onclick="location.href='https://https://www.instagram.com/sh_i_ron'" />
+        </div>
+      </div>
+    </div>
+    <p class="copyright">© 2025 Ronald • All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

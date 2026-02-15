@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaquaries.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <nav id="desktop-nav">
+    <div class="logo">Ronald</div>
+    <div style="display: flex; align-items: center; gap: 2rem;">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Skills.html">Skills</a></li>
+        <li><a href="Project.html">Projects</a></li>
+        <li><a href="Testimonials.html">Testimonials</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+
+    </div>
+
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">Ronald</div>
+
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <ul>
+          <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+          <li><a href="About.html" onclick="toggleMenu()">About</a></li>
+          <li><a href="Skills.html" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="Project.html" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="Testimonials.html" onclick="toggleMenu()">Testimonials</a></li>
+          <li><a href="Contact.html" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="./assets/circle.png" alt="Ronald Sevilla profile picture" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Ronald Sevilla</h1>
+      <p class="section__text__p2">BS Information Technology</p>
+      <p class="section__text__p2">Specialization in Backend Development</p>
+      <div class="btn-container">
+        <button class="btn btn-color-1" onclick="location.href=' Contact.html'">
+          Contact Info
+        </button>
+      </div>
+    </div>
+  </section>
+  <section id="What i do">
+    <div class="intro-text-container">
+      <p class="title">Professional Introduction</p>
+      <p class="section__text__p2">
+        I am a dedicated Information Technology student specializing in Backend Development.
+        My passion lies in constructing robust server-side logic and efficient data management systems.
+        I am committed to developing scalable solutions and optimizing application performance.
+        Through hands-on projects and continuous learning, I am building expertise in API development
+        and database management, ready to contribute to impactful technical solutions.
+      </p>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Skills.html">Skills</a></li>
+          <li><a href="Project.html">Projects</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Contact Me</h3>
+        <div class="social-icons">
+          <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
+            onclick="location.href='https://www.linkedin.com/in/ronald-sevilla-124081190/'" />
+          <img src="./assets/github.png" alt="My Github profile" class="icon"
+            onclick="location.href='https://github.com/shironxiao/shironxiao'" />
+          <img src="./assets/facebook.png" alt="My facebook profile" class="icon"
+            onclick="location.href='https://www.facebook.com/shiron08/'" />
+          <img src="./assets/instagram.png" alt="My instagram profile" class="icon"
+            onclick="location.href='https://https://www.instagram.com/sh_i_ron'" />
+        </div>
+      </div>
+    </div>
+    <p class="copyright">© 2025 Ronald • All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
