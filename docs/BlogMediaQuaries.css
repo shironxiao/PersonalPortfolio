@@ -1,0 +1,45 @@
+/* Blog Page Media Queries */
+
+@media screen and (max-width: 1400px) {
+    #blog {
+        height: fit-content;
+        margin-bottom: 6rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .blog-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1rem;
+    }
+
+    #blog {
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .blog-container {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #blog {
+        margin-bottom: 0;
+    }
+
+    .blog-container {
+        padding: 1rem 5%;
+        margin-top: 1rem;
+    }
+
+    .blog-card-image {
+        height: 180px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+}

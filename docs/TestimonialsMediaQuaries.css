@@ -1,0 +1,107 @@
+@media screen and (max-width: 1400px) {
+    #testimonials {
+        height: fit-content;
+        margin-bottom: 6rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #desktop-nav {
+        display: none;
+    }
+
+    #hamburger-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+    }
+
+    /* Theme toggle button in hamburger nav */
+    #hamburger-nav .theme-toggle {
+        margin-left: auto;
+        margin-right: 1rem;
+    }
+
+    #testimonials {
+        margin-top: 2rem;
+    }
+
+    section {
+        height: fit-content;
+        margin: 0 5%;
+    }
+
+    .testimonials-container {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    footer {
+        height: 40vh;
+        margin-bottom: 2rem;
+    }
+
+    footer nav {
+        height: fit-content;
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    footer .nav-links-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    footer .nav-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    footer .nav-links li {
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links li a {
+        font-size: 1rem;
+        color: var(--text);
+    }
+
+    /* Theme toggle adjustments for mobile */
+    #hamburger-nav .theme-toggle {
+        padding: 6px 10px;
+        font-size: 16px;
+    }
+
+    /* Footer copyright spacing for mobile */
+    footer .copyright {
+        margin-bottom: 5rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .testimonials-container {
+        width: 90%;
+    }
+
+    .testimonial-form-container {
+        padding: 1.5rem;
+    }
+}

@@ -1,6 +1,6 @@
 @media screen and (max-width: 1400px) {
   #profile {
-    height: 83vh;
+    height: fit-content;
     margin-bottom: 6rem;
   }
 
@@ -55,15 +55,45 @@
     margin: 0 5%;
   }
 
+  .profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    height: fit-content;
+    margin-bottom: 2rem;
+  }
+
   .section__pic-container {
     width: 275px;
     height: 275px;
-    margin: 0 auto 2rem;
+    margin: 0 auto;
+  }
+
+  .section__text {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .section__text__p1,
+  .title,
+  .introduction-text {
+    text-align: center !important;
+  }
+
+  .section__text__p2 {
+    font-size: 1.5rem;
+  }
+
+  .btn-container {
+    justify-content: center;
   }
 
   .about-containers {
     margin-top: 0;
   }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -78,8 +108,8 @@
   }
 
   #profile {
-    height: 83vh;
-    margin-bottom: -3rem;
+    height: fit-content;
+    margin-bottom: 0;
   }
 
   article {
@@ -192,34 +222,5 @@
   #hamburger-nav .theme-toggle {
     padding: 6px 10px;
     font-size: 16px;
-  }
-}
-
-@media screen and (max-width: 1400px) {
-  #profile {
-    height: 83vh;
-    margin-bottom: 6rem;
-  }
-
-  .about-containers {
-    flex-wrap: wrap;
-  }
-
-  #contact,
-  #projects {
-    height: fit-content;
-  }
-
-  .details-container {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  .education-list {
-    padding: 0.5rem;
-  }
-
-  .education-item {
-    margin-bottom: 1rem;
   }
 }

@@ -528,17 +528,42 @@ article .icon {
 /* Enhanced Skills Section - 4x2 Grid Layout */
 
 #skills .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* Centers items if less than a full row */
   gap: 3rem;
   max-width: 1400px;
   margin: 0 auto;
   padding: 2rem;
 }
 
+/* Category Styles */
+.skills-category {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto 3rem auto;
+}
+
+.skills-category-title {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+
 #skills article {
   display: flex;
   flex-direction: column;
+  flex: 0 1 300px;
+  /* Base width */
+  width: 300px;
+  /* Ensure generic width */
   align-items: center;
   justify-content: center;
   gap: 1.5rem;

@@ -263,10 +263,9 @@ a:hover {
 
 section {
   padding-top: 4vh;
-  height: 96vh;
+  min-height: fit-content;
   margin: 0 10rem;
   box-sizing: border-box;
-  min-height: fit-content;
 }
 
 .section-container {
@@ -278,8 +277,21 @@ section {
 #profile {
   display: flex;
   justify-content: center;
-  gap: 5rem;
-  height: 80vh;
+  align-items: center;
+  height: 90vh;
+  margin-bottom: 2rem;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  /* Reduced gap from 4rem */
+  align-items: center;
+  /* Vertically center aligned */
+  max-width: 1200px;
+  width: 100%;
+  flex-direction: row-reverse;
 }
 
 .section__pic-container {
@@ -293,9 +305,10 @@ section {
   overflow: hidden;
   padding: 0.5rem;
   background: var(--card-bg);
-  /* adapts to light/dark via CSS variables */
   border: 0.08rem solid var(--border);
   box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+  flex-shrink: 0;
+  /* Prevent image from shrinking */
 }
 
 /* Ensure the image fills the circular frame */
@@ -310,48 +323,86 @@ section {
 
 .section__text {
   align-self: center;
-  text-align: center;
-
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  /* Removed generic gap to control spacing via margins for better grouping */
+  gap: 0;
+  max-width: 600px;
 }
 
 .section__text p {
   font-weight: 600;
   color: var(--muted-text);
+  margin: 0;
+  /* Reset default margins */
 }
 
 .section__text__p1 {
-  text-align: center;
+  text-align: left;
   color: var(--muted-text);
   font-family: "Poppins", sans-serif;
-}
-
-.section__text__p2 {
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
-  color: var(--text);
+  margin-bottom: 0;
+  /* Removed space between "Hello" and Name */
+  font-size: 1.5rem;
 }
 
 .title {
-  font-size: 3rem;
+  font-size: 3.5rem;
+  /* Slightly larger */
   font-family: "Anton", sans-serif;
-  text-align: center;
+  text-align: left;
   color: var(--text);
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+  /* Space after name */
+  margin-top: 0;
+  /* Remove default browser margin */
 }
 
+/* Primary Role (Full Stack) */
+.primary-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+  line-height: 1.2;
+}
 
+/* Secondary Credential (BSIT) */
+.secondary-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--muted-text);
+  /* De-emphasized */
+  margin-bottom: 1.5rem;
+  /* Gap before introduction */
+}
 
-/* ICONS */
+/* Introduction Text Styles */
+.intro-text {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  /* Reduced from 2rem to bring buttons closer */
+}
 
-.icon {
-  cursor: pointer;
-  height: 2rem;
+.introduction-text {
+  text-align: left;
+  line-height: 1.7;
+  /* Relaxed reading rhythm */
+  font-size: 1.05rem !important;
+  font-weight: normal !important;
+  color: var(--muted-text) !important;
+  margin: 0;
+  max-width: 90%;
+  /* Prevent lines from being too long to read */
 }
 
 /* BUTTONS */
-
 .btn-container {
   display: flex;
   justify-content: flex-start;
+  /* Align buttons to start (left) */
   gap: 1rem;
 }
 
@@ -367,58 +418,6 @@ section {
 .btn-container {
   gap: 1rem;
 }
-
-/* Styles for the "What i do" intro text (added) */
-section[id="What i do"] {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem 0;
-}
-
-section[id="What i do"] .intro-text-container {
-  max-width: 780px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 2rem;
-  text-align: center;
-}
-
-section[id="What i do"] .intro-text-container .title {
-  margin-bottom: 2rem;
-}
-
-section[id="What i do"] .intro-text-container .section__text__p2 {
-  text-align: justify;
-  line-height: 1.65;
-  margin-bottom: 1rem;
-}
-
-/* Responsive styles for "What i do" section */
-@media (max-width: 900px) {
-  section[id="What i do"] {
-    padding: 1.5rem 0;
-    margin: 0 2rem;
-    justify-content: center;
-  }
-
-  section[id="What i do"] .intro-text-container {
-    padding: 0 1rem;
-    max-width: 100%;
-  }
-
-  section[id="What i do"] .intro-text-container .section__text__p2 {
-    text-align: justify;
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 600px) {
-  section[id="What i do"] .intro-text-container .section__text__p2 {
-    font-size: 1.25rem;
-  }
-}
-
 
 /* Responsive adjustments for smaller screens to prevent overlapping */
 @media (max-width: 900px) {
