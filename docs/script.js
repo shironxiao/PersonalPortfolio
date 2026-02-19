@@ -30,20 +30,23 @@ document.addEventListener('keydown', function (e) {
 
 // ===== ACTIVE NAV INDICATOR =====
 function updateActiveNavLink() {
-    // Get all nav links
-    const navLinks = document.querySelectorAll('.nav-links a');
-
-    // Get current page filename
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
-    // Update active link styling based on current page
-    navLinks.forEach(link => {
+    // Top nav links
+    document.querySelectorAll('.nav-links a').forEach(link => {
         link.classList.remove('active');
-
-        // Get the href attribute
         const href = link.getAttribute('href');
+        if (href === currentPage ||
+            (currentPage === '' && href === 'index.html') ||
+            (currentPage === 'index.html' && href === 'index.html')) {
+            link.classList.add('active');
+        }
+    });
 
-        // Check if this link matches the current page
+    // Footer nav links
+    document.querySelectorAll('.footer-nav a').forEach(link => {
+        link.classList.remove('active');
+        const href = link.getAttribute('href');
         if (href === currentPage ||
             (currentPage === '' && href === 'index.html') ||
             (currentPage === 'index.html' && href === 'index.html')) {

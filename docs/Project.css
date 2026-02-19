@@ -605,31 +605,28 @@ section {
 }
 
 .project-btn {
-  /* Prevent full width expansion */
   width: fit-content;
-  min-width: 120px;
-  /* Optional: minimum width for consistency */
-  padding: 0.8rem;
-  border-radius: 2rem;
-  border: 1px solid transparent;
-  /* Ensure equal size with secondary button */
-  background: var(--accent);
-  color: var(--bg);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 0 0 1px;
+  font-size: 0.95rem;
   font-weight: 600;
+  color: var(--text);
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  transition: all 0.3s ease;
+  gap: 0.4rem;
+  text-decoration: none;
+  transition: color 0.25s ease, border-color 0.25s ease;
   box-sizing: border-box;
-  /* Ensure padding/border included in width/height */
 }
 
 .project-btn:hover {
-  background: transparent;
   color: var(--accent);
-  border-color: var(--accent);
+  background: none;
+  border: none;
+  border-bottom: 2px solid var(--accent);
 }
 
 .project-btn.secondary {
@@ -873,7 +870,8 @@ footer {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.95);
-  animation: fadeIn 0.3s ease;
+  align-items: center;
+  justify-content: center;
 }
 
 .image-modal.active {
@@ -886,7 +884,6 @@ footer {
   max-width: 90%;
   max-height: 90%;
   object-fit: contain;
-  animation: zoomIn 0.3s ease;
 }
 
 .modal-close {
@@ -910,30 +907,8 @@ footer {
 
 .modal-close:hover {
   background: rgba(255, 255, 255, 0.2);
-  transform: rotate(90deg);
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes zoomIn {
-  from {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
 
 /* Mobile responsive */
 @media (max-width: 600px) {

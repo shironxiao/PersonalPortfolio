@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaquaries.css" />
   <link rel="stylesheet" href="Contact.css" />
   <link rel="stylesheet" href="ContactMediaQuaries.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -13,7 +15,11 @@
 
 <body>
   <nav id="desktop-nav">
-    <div class="logo">Ronald</div>
+    <a href="index.html" class="logo"
+      style="display:flex; align-items:center; gap:0.5rem; text-decoration:none; color:inherit;">
+      <img src="./assets/PortfolioLogo.png" alt="Logo" style="height:2.75rem; width:auto;">
+      Ronald
+    </a>
     <div style="display: flex; align-items: center; gap: 2rem;">
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -29,7 +35,11 @@
 
   </nav>
   <nav id="hamburger-nav">
-    <div class="logo">Ronald</div>
+    <a href="index.html" class="logo"
+      style="display:flex; align-items:center; gap:0.5rem; text-decoration:none; color:inherit;">
+      <img src="./assets/PortfolioLogo.png" alt="Logo" style="height:2.75rem; width:auto;">
+      Ronald
+    </a>
 
     <div class="hamburger-menu">
       <div class="hamburger-icon" onclick="toggleMenu()">
@@ -43,6 +53,7 @@
           <li><a href="About.html" onclick="toggleMenu()">About</a></li>
           <li><a href="Skills.html" onclick="toggleMenu()">Skills</a></li>
           <li><a href="Project.html" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="Testimonials.html" onclick="toggleMenu()">Testimonials</a></li>
           <li><a href="Contact.html" onclick="toggleMenu()">Contact</a></li>
           <li><a href="Blog.html" onclick="toggleMenu()">Blog</a></li>
         </ul>
@@ -53,43 +64,53 @@
 
     <h1 class="title">Contact Me</h1>
     <div class="contact-container">
-      <!-- Contact Information - Left Side -->
+
+      <!-- Left: Intro + Contact Info -->
       <div class="contact-info-section">
+        <div class="contact-intro">
+          <h2>Let's work together</h2>
+          <p>Have a project in mind or just want to say hello? Fill out the form and I'll get back to you as soon as
+            possible.</p>
+        </div>
         <div class="contact-details">
-          <div class="contact-item">
+          <a class="contact-item" href="mailto:sevillaronald32@gmail.com">
             <i class="fas fa-envelope"></i>
             <div class="contact-text">
               <h3>Email</h3>
-              <a href="mailto:sevillaronald32@gmail.com">sevillaronald32@gmail.com</a>
+              <span>sevillaronald32@gmail.com</span>
             </div>
-          </div>
-          <div class="contact-item">
+          </a>
+          <a class="contact-item" href="https://www.linkedin.com/in/ronald-sevilla-124081190/" target="_blank"
+            rel="noopener noreferrer">
             <i class="fab fa-linkedin"></i>
             <div class="contact-text">
               <h3>LinkedIn</h3>
-              <a href="https://www.linkedin.com/in/ronald-sevilla-124081190/" target="_blank">Ronald Sevilla</a>
+              <span>Ronald Sevilla</span>
             </div>
-          </div>
-          <div class="contact-item">
+          </a>
+          <a class="contact-item" href="https://www.google.com/maps/search/Camarines+Norte" target="_blank"
+            rel="noopener noreferrer">
             <i class="fas fa-map-marker-alt"></i>
             <div class="contact-text">
               <h3>Location</h3>
-              <p>Camarines Norte</p>
+              <span>Camarines Norte</span>
             </div>
-          </div>
+          </a>
         </div>
       </div>
 
-      <!-- Contact Form - Right Side -->
+      <!-- Right: Contact Form -->
       <div class="contact-form-section">
         <form id="contactForm" class="contact-form">
-          <div class="form-group">
-            <label for="name">Name *</label>
-            <input type="text" id="name" name="name" required placeholder="Your Name">
-          </div>
-          <div class="form-group">
-            <label for="email">Email *</label>
-            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input type="text" id="name" name="name" required placeholder="Your Name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+            </div>
           </div>
           <div class="form-group">
             <label for="subject">Subject *</label>
@@ -97,7 +118,7 @@
           </div>
           <div class="form-group">
             <label for="message">Message *</label>
-            <textarea id="message" name="message" rows="5" required placeholder="Your message..."></textarea>
+            <textarea id="message" name="message" rows="6" required placeholder="Your message..."></textarea>
           </div>
           <button type="submit" class="submit-btn">
             <i class="fas fa-paper-plane"></i> Send Message
@@ -110,36 +131,36 @@
           <p>Thank you for reaching out. I'll get back to you soon.</p>
         </div>
       </div>
+
     </div>
   </section>
   <footer>
-    <div class="footer-content">
-      <div class="footer-column">
-        <h3>Quick Links</h3>
-        <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="About.html">About</a></li>
-          <li><a href="Skills.html">Skills</a></li>
-          <li><a href="Project.html">Projects</a></li>
-          <li><a href="Contact.html">Contact</a></li>
-          <li><a href="Blog.html">Blog</a></li>
-        </ul>
+    <div class="footer-center">
+      <div class="footer-logo">
+        <span class="footer-logo-name">Ronald Sevilla</span>
       </div>
-      <div class="footer-column">
-        <h3>Contact Me</h3>
-        <div class="social-icons">
-          <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
-            onclick="location.href='https://www.linkedin.com/in/ronald-sevilla-124081190/'" />
-          <img src="./assets/github.png" alt="My Github profile" class="icon"
-            onclick="location.href='https://github.com/shironxiao/shironxiao'" />
-          <img src="./assets/facebook.png" alt="My facebook profile" class="icon"
-            onclick="location.href='https://www.facebook.com/shiron08/'" />
-          <img src="./assets/instagram.png" alt="My instagram profile" class="icon"
-            onclick="location.href='https://https://www.instagram.com/sh_i_ron'" />
-        </div>
+      <p class="footer-tagline">Full-Stack Developer building scalable applications and immersive web experiences.</p>
+      <ul class="footer-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Skills.html">Skills</a></li>
+        <li><a href="Project.html">Projects</a></li>
+        <li><a href="Testimonials.html">Testimonials</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+      </ul>
+      <div class="social-icons">
+        <img src="./assets/linkedin.png" alt="LinkedIn" class="icon"
+          onclick="location.href='https://www.linkedin.com/in/ronald-sevilla-124081190/'" />
+        <img src="./assets/github.png" alt="Github" class="icon"
+          onclick="location.href='https://github.com/shironxiao/shironxiao'" />
+        <img src="./assets/facebook.png" alt="Facebook" class="icon"
+          onclick="location.href='https://www.facebook.com/shiron08/'" />
+        <img src="./assets/instagram.png" alt="Instagram" class="icon"
+          onclick="location.href='https://www.instagram.com/sh_i_ron/?__pwa=1'" />
       </div>
+      <p class="copyright">© 2026 Ronald Sevilla • All rights reserved.</p>
     </div>
-    <p class="copyright">© 2025 Ronald • All rights reserved.</p>
   </footer>
   <!-- EmailJS SDK -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>

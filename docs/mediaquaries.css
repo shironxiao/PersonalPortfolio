@@ -1,3 +1,8 @@
+/* =====================================================
+   RESPONSIVE - mediaquaries.css
+   ===================================================== */
+
+/* ── 1400px: Large tablet / small desktop ── */
 @media screen and (max-width: 1400px) {
   #profile {
     height: fit-content;
@@ -14,7 +19,10 @@
   }
 }
 
+/* ── 1200px: Switch desktop nav → hamburger nav ── */
 @media screen and (max-width: 1200px) {
+
+  /* Hide desktop nav, show hamburger */
   #desktop-nav {
     display: none;
   }
@@ -24,14 +32,76 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    /* Make nav the positioning parent for the dropdown */
+    overflow: visible;
   }
 
-  /* Theme toggle button in hamburger nav */
+  /* Remove relative positioning from hamburger-menu so dropdown
+     positions relative to the nav bar instead */
+  .hamburger-menu {
+    position: static;
+  }
+
+  /* Logo inside hamburger nav */
+  #hamburger-nav .logo {
+    font-size: 1.75rem;
+  }
+
+  /* Theme toggle positioning */
   #hamburger-nav .theme-toggle {
     margin-left: auto;
     margin-right: 1rem;
   }
 
+  /* Hamburger dropdown — full-width below the nav bar */
+  .menu-links {
+    position: fixed;
+    top: 10vh;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: var(--card-bg);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    z-index: 998;
+  }
+
+  .menu-links.open {
+    max-height: 400px;
+  }
+
+  .menu-links a {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    text-align: left;
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.2s ease, background 0.2s ease;
+  }
+
+  .menu-links a:hover {
+    color: var(--accent);
+    background: rgba(59, 130, 246, 0.06);
+  }
+
+  .menu-links a.active {
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  /* Page layout */
   #experience,
   .experience-details-container {
     margin-top: 2rem;
@@ -80,6 +150,9 @@
   .title,
   .introduction-text {
     text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 100% !important;
   }
 
   .section__text__p2 {
@@ -93,14 +166,81 @@
   .about-containers {
     margin-top: 0;
   }
-
 }
 
+/* ── 900px: Tablet ── */
+@media screen and (max-width: 900px) {
+  #hamburger-nav {
+    padding: 0 1.5rem;
+  }
+
+  #hamburger-nav .logo {
+    font-size: 1.5rem;
+  }
+
+  .menu-links a {
+    font-size: 1rem;
+    padding: 0.7rem 1.25rem;
+  }
+
+  section {
+    margin: 0 4%;
+  }
+
+  .section__pic-container {
+    width: 230px;
+    height: 230px;
+  }
+}
+
+/* ── 600px: Mobile ── */
 @media screen and (max-width: 600px) {
 
+  /* Nav */
+  #hamburger-nav {
+    padding: 0 1rem;
+    height: 8vh;
+    min-height: 56px;
+  }
+
+  #hamburger-nav .logo {
+    font-size: 1.25rem;
+    gap: 0.35rem;
+  }
+
+  #hamburger-nav .logo img {
+    height: 2.25rem;
+  }
+
+  #hamburger-nav .theme-toggle {
+    padding: 6px 10px;
+    font-size: 16px;
+    margin-right: 0.5rem;
+  }
+
+  .hamburger-icon {
+    width: 26px;
+    height: 20px;
+  }
+
+  .menu-links {
+    right: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 0 0 0.75rem 0.75rem;
+    min-width: unset;
+  }
+
+  .menu-links a {
+    font-size: 1rem;
+    padding: 0.85rem 1.25rem;
+    text-align: center;
+  }
+
+  /* General layout */
   #contact,
   footer {
-    height: 40vh;
+    height: fit-content;
   }
 
   footer {
@@ -117,19 +257,18 @@
     color: var(--text);
   }
 
-  footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-
   footer .nav-links-container {
     display: flex;
     justify-content: center;
     width: 100%;
     margin: 0 auto;
+  }
+
+  /* Footer nav — stack links vertically on mobile */
+  .footer-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
   }
 
   footer .nav-links {
@@ -181,7 +320,7 @@
   }
 
   .logo {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: var(--text);
   }
 
@@ -192,8 +331,8 @@
   }
 
   .section__pic-container {
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
     justify-content: center;
     margin: 0 auto;
   }
@@ -213,14 +352,42 @@
     color: var(--muted-text);
   }
 
-  /* Footer copyright spacing for mobile */
+  /* Footer */
   footer .copyright {
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* ── 400px: Small mobile ── */
+@media screen and (max-width: 400px) {
+  #hamburger-nav {
+    padding: 0 0.75rem;
   }
 
-  /* Theme toggle adjustments for mobile */
+  #hamburger-nav .logo {
+    font-size: 1.1rem;
+  }
+
+  #hamburger-nav .logo img {
+    height: 2rem;
+  }
+
   #hamburger-nav .theme-toggle {
-    padding: 6px 10px;
-    font-size: 16px;
+    font-size: 14px;
+    padding: 5px 8px;
+  }
+
+  .menu-links a {
+    font-size: 0.95rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .section__pic-container {
+    width: 175px;
+    height: 175px;
   }
 }

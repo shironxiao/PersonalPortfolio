@@ -123,17 +123,21 @@
 .read-more-btn {
     display: inline-flex;
     align-items: center;
+    align-self: flex-start;
     gap: 0.5rem;
     color: var(--text);
     font-weight: 600;
     text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 1px;
     margin-top: auto;
-    transition: color 0.2s ease;
+    transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 .read-more-btn:hover {
     color: var(--accent, #007bff);
-    text-decoration: underline;
+    border-bottom-color: var(--accent, #007bff);
+    text-decoration: none;
 }
 
 /* Dark Mode support (assuming variables exist based on other files) */
