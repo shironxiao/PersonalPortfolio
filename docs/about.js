@@ -7,7 +7,7 @@ async function fetchGitHubData() {
     const username = 'shironxiao';
 
     try {
-        // Fetch Profile and Repositories concurrently
+        
         const [profileRes, reposRes] = await Promise.all([
             fetch(`https://api.github.com/users/${username}`),
             fetch(`https://api.github.com/users/${username}/repos?per_page=100&sort=updated`)
@@ -47,21 +47,21 @@ function calculateTopLanguages(repos) {
         }
     });
 
-    // Convert to array and sort
+    
     const langArray = Object.keys(langCount).map(lang => ({
         name: lang,
         count: langCount[lang],
         percentage: ((langCount[lang] / total) * 100).toFixed(1)
     })).sort((a, b) => b.count - a.count);
 
-    // Return top 5
+    
     return langArray.slice(0, 5);
 }
 
 function renderGitHubSection(profile, languages) {
     const container = document.getElementById('github-content');
 
-    // Format Date
+    
     const joinedDate = new Date(profile.created_at).toLocaleDateString('en-US', {
         year: 'numeric',
         month: 'long'

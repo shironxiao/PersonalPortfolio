@@ -1,6 +1,4 @@
-/* =========================================================
-   THEME VARIABLES (DEFAULT = LIGHT MODE)
-   ========================================================= */
+
 :root {
   --bg: #FFFFFF;
   --text: #1F2937;
@@ -12,7 +10,7 @@
 
 
 
-/* Make icons adapt to theme */
+
 .icon {
   cursor: pointer;
   height: 2rem;
@@ -22,9 +20,7 @@
 
 
 
-/* =========================================================
-   GENERAL (PRESERVING ORIGINAL LAYOUT)
-   ========================================================= */
+
 @font-face {
   font-family: "Anton";
   src: url("fonts/Anton-Regular.ttf") format("truetype");
@@ -45,14 +41,14 @@ p {
   color: var(--muted-text);
 }
 
-/* TRANSITION */
+
 
 a,
 .btn {
   transition: all 300ms ease;
 }
 
-/* DESKTOP NAV */
+
 
 nav,
 .nav-links {
@@ -66,7 +62,7 @@ nav {
   margin: 0 5rem;
 }
 
-/* Sticky nav positioning */
+
 #desktop-nav {
   position: sticky;
   top: 0;
@@ -83,7 +79,7 @@ nav {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Hide nav when idle */
+
 #desktop-nav.hidden,
 #hamburger-nav.hidden {
   transform: translateY(-100%);
@@ -91,7 +87,7 @@ nav {
   pointer-events: none;
 }
 
-/* Show nav when active */
+
 #desktop-nav.visible,
 #hamburger-nav.visible {
   transform: translateY(0);
@@ -118,7 +114,7 @@ nav {
   text-decoration-color: var(--accent);
 }
 
-/* Active nav link indicator */
+
 .nav-links a.active {
   color: var(--accent);
   text-decoration: underline;
@@ -126,7 +122,7 @@ nav {
   text-decoration-color: var(--accent);
 }
 
-/* General link styles */
+
 a {
   color: var(--text);
   text-decoration: none;
@@ -149,7 +145,7 @@ a:hover {
   cursor: default;
 }
 
-/* THEME TOGGLE BUTTON */
+
 
 
 .btn-color-1,
@@ -183,7 +179,7 @@ a:hover {
   transform: translateY(-2px);
 }
 
-/* HAMBURGER MENU */
+
 
 #hamburger-nav {
   display: none;
@@ -263,7 +259,7 @@ a:hover {
   transform: none;
 }
 
-/* SECTIONS */
+
 
 section {
   padding-top: 4vh;
@@ -276,7 +272,7 @@ section {
   display: flex;
 }
 
-/* PROFILE SECTION */
+
 
 #profile {
   display: flex;
@@ -290,9 +286,9 @@ section {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  /* Reduced gap from 4rem */
+  
   align-items: center;
-  /* Vertically center aligned */
+  
   max-width: 1200px;
   width: 100%;
   flex-direction: row-reverse;
@@ -312,10 +308,10 @@ section {
   border: 0.08rem solid var(--border);
   box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
   flex-shrink: 0;
-  /* Prevent image from shrinking */
+  
 }
 
-/* Ensure the image fills the circular frame */
+
 .section__pic-container img,
 .about-pic {
   width: 100%;
@@ -330,7 +326,7 @@ section {
   text-align: left;
   display: flex;
   flex-direction: column;
-  /* Removed generic gap to control spacing via margins for better grouping */
+  
   gap: 0;
   max-width: 600px;
 }
@@ -339,7 +335,7 @@ section {
   font-weight: 600;
   color: var(--muted-text);
   margin: 0;
-  /* Reset default margins */
+  
 }
 
 .section__text__p1 {
@@ -347,24 +343,24 @@ section {
   color: var(--muted-text);
   font-family: "Poppins", sans-serif;
   margin-bottom: 0;
-  /* Removed space between "Hello" and Name */
+  
   font-size: 1.5rem;
 }
 
 .title {
   font-size: 3.5rem;
-  /* Slightly larger */
+  
   font-family: "Anton", sans-serif;
   text-align: left;
   color: var(--text);
   line-height: 1.1;
   margin-bottom: 0.5rem;
-  /* Space after name */
+  
   margin-top: 0;
-  /* Remove default browser margin */
+  
 }
 
-/* Primary Role (Full Stack) */
+
 .primary-title {
   font-size: 1.75rem;
   font-weight: 600;
@@ -373,40 +369,40 @@ section {
   line-height: 1.2;
 }
 
-/* Secondary Credential (BSIT) */
+
 .secondary-title {
   font-size: 1.1rem;
   font-weight: 500;
   color: var(--muted-text);
-  /* De-emphasized */
+  
   margin-bottom: 1.5rem;
-  /* Gap before introduction */
+  
 }
 
-/* Introduction Text Styles */
+
 .intro-text {
   margin-top: 0;
   margin-bottom: 1rem;
-  /* Reduced from 2rem to bring buttons closer */
+  
 }
 
 .introduction-text {
   text-align: left;
   line-height: 1.7;
-  /* Relaxed reading rhythm */
+  
   font-size: 1.05rem !important;
   font-weight: normal !important;
   color: var(--muted-text) !important;
   margin: 0;
   max-width: 90%;
-  /* Prevent lines from being too long to read */
+  
 }
 
-/* BUTTONS */
+
 .btn-container {
   display: flex;
   justify-content: flex-start;
-  /* Align buttons to start (left) */
+  
   gap: 1rem;
 }
 
@@ -423,11 +419,11 @@ section {
   gap: 1rem;
 }
 
-/* Responsive adjustments for smaller screens to prevent overlapping */
+
 @media (max-width: 900px) {
   section {
     height: auto;
-    /* let content determine height on small screens */
+    
     margin: 0 2rem;
     padding-top: 3vh;
   }
@@ -471,7 +467,7 @@ section {
 
 
 
-/* FOOTER SECTION */
+
 
 footer {
   padding: 2.5rem 1rem 1.5rem;
@@ -554,16 +550,14 @@ footer {
   margin: 0.25rem 0 0;
 }
 
-/* Responsive Footer */
+
 @media (max-width: 600px) {
   .footer-nav {
     gap: 0.4rem 1rem;
   }
 }
 
-/* =========================================================
-   WHAT I DO SECTION
-   ========================================================= */
+
 .whatido-section {
   margin: 0 10rem;
   padding: 5rem 0 2rem;
@@ -659,9 +653,7 @@ footer {
 
 
 
-/* =========================================================
-   LET'S WORK TOGETHER SECTION
-   ========================================================= */
+
 .worktogether-section {
   margin: 0 10rem;
   padding: 4rem 0 5rem;
@@ -756,7 +748,7 @@ footer {
   text-decoration: none;
 }
 
-/* ----- Responsive ----- */
+
 @media (max-width: 1100px) {
   .whatido-grid {
     grid-template-columns: repeat(2, 1fr);

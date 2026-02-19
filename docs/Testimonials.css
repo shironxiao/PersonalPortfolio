@@ -1,4 +1,4 @@
-/* Testimonials Page Styles */
+
 
 #testimonials {
     display: flex;
@@ -17,7 +17,7 @@
     padding-bottom: 3rem;
 }
 
-/* Form Styles */
+
 .testimonial-form-container {
     background: var(--card-bg);
     border: 1px solid var(--border);
@@ -63,7 +63,7 @@
     border-color: var(--accent);
 }
 
-/* Star Rating */
+
 .star-rating {
     display: flex;
     flex-direction: row-reverse;
@@ -87,10 +87,10 @@
 .star-rating label:hover~label,
 .star-rating input:checked~label {
     color: #FFD700;
-    /* Gold color */
+    
 }
 
-/* Display List Styles */
+
 .testimonials-list {
     display: flex;
     flex-direction: column;
@@ -148,7 +148,7 @@
     margin-top: 1rem;
 }
 
-/* Responsive */
+
 @media screen and (max-width: 768px) {
     .testimonials-container {
         width: 90%;

@@ -1,4 +1,4 @@
-// Image fullscreen modal helpers
+
 function openImageFullscreen(img) {
     const modal = document.getElementById('imageModal');
     const modalImg = document.getElementById('modalImage');
@@ -15,7 +15,7 @@ function closeImageFullscreen() {
     }
 }
 
-// Close modal when clicking outside the image
+
 document.addEventListener('DOMContentLoaded', function () {
     const modal = document.getElementById('imageModal');
     if (modal) {

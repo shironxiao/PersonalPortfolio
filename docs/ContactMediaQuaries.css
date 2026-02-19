@@ -1,4 +1,4 @@
-/* ── 1400px ── */
+
 @media screen and (max-width: 1400px) {
   #profile {
     height: fit-content;
@@ -20,7 +20,7 @@
   }
 }
 
-/* ── 1200px: Switch desktop nav → hamburger nav ── */
+
 @media screen and (max-width: 1200px) {
   #desktop-nav {
     display: none;
@@ -110,7 +110,7 @@
     min-height: unset;
   }
 
-  /* Contact section specifically */
+  
   #contact {
     height: auto;
     padding-bottom: 4rem;
@@ -131,7 +131,7 @@
   }
 }
 
-/* ── 900px: Tablet — stack contact layout vertically ── */
+
 @media screen and (max-width: 900px) {
   #hamburger-nav {
     padding: 0 1.5rem;
@@ -155,7 +155,7 @@
     box-sizing: border-box;
   }
 
-  /* Contact: stack two columns vertically */
+  
   #contact {
     height: auto;
     padding-bottom: 3rem;
@@ -195,7 +195,7 @@
   }
 }
 
-/* ── 600px: Mobile ── */
+
 @media screen and (max-width: 600px) {
   #hamburger-nav {
     padding: 0 1rem;
@@ -243,7 +243,7 @@
     padding-bottom: 2rem;
   }
 
-  /* Contact form: single column on mobile */
+  
   .contact-container {
     flex-direction: column;
     gap: 1.5rem;
@@ -276,7 +276,7 @@
     box-sizing: border-box;
   }
 
-  /* Stack Name + Email row vertically */
+  
   .form-row {
     flex-direction: column;
     gap: 0;
@@ -350,7 +350,7 @@
     margin-bottom: 1rem;
   }
 
-  /* Contact form: single column on mobile */
+  
   .contact-container {
     flex-direction: column;
     gap: 1.5rem;
@@ -376,7 +376,7 @@
     padding: 1.5rem;
   }
 
-  /* Stack Name + Email side-by-side row into vertical */
+  
   .form-row {
     flex-direction: column;
     gap: 0;
@@ -388,7 +388,7 @@
   }
 }
 
-/* ── 400px: Small mobile ── */
+
 @media screen and (max-width: 400px) {
   #hamburger-nav {
     padding: 0 0.75rem;

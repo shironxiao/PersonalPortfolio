@@ -1,4 +1,4 @@
-// Blog.js
+
 
 document.addEventListener('DOMContentLoaded', () => {
     fetchBlogPosts();
@@ -16,7 +16,7 @@ async function fetchBlogPosts() {
         }
         const articles = await response.json();
 
-        // Clear loading spinner
+        
         blogContainer.innerHTML = '';
 
         if (articles.length === 0) {
@@ -25,13 +25,13 @@ async function fetchBlogPosts() {
         }
 
         for (const article of articles) {
-            // If cover_image is missing, fetch full article details to parse markdown image
+            
             if (!article.cover_image) {
                 try {
                     const detailsResponse = await fetch(`https://dev.to/api/articles/${article.id}`);
                     if (detailsResponse.ok) {
                         const details = await detailsResponse.json();
-                        // Regex to find first markdown image: ![alt](url)
+                        
                         const imageMatch = details.body_markdown && details.body_markdown.match(/!\[.*?\]\((.*?)\)/);
                         if (imageMatch && imageMatch[1]) {
                             article.cover_image = imageMatch[1];
@@ -61,11 +61,11 @@ function createBlogCard(article) {
     const card = document.createElement('div');
     card.className = 'blog-card';
 
-    // Use a placeholder if no cover image is provided
-    // Use cover_image or social_image from Dev.to, otherwise a generic "No Image Available" placeholder
+    
+    
     const coverImage = article.cover_image || article.social_image || 'https://placehold.co/600x400?text=No+Image+Available';
 
-    // Format date
+    
     const date = new Date(article.published_at).toLocaleDateString('en-US', {
         year: 'numeric',
         month: 'long',

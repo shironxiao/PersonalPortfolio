@@ -1,18 +1,18 @@
-// Testimonials.js
 
-// Constants
+
+
 const STORAGE_KEY = 'site_testimonials';
 
-// Initialize on page load
+
 document.addEventListener('DOMContentLoaded', () => {
     loadTestimonials();
 });
 
-// Handle Form Submission
+
 function submitTestimonial(event) {
     event.preventDefault();
 
-    // 1. Get Values
+    
     const nameInput = document.getElementById('name');
     const feedbackInput = document.getElementById('feedback');
     const ratingInputs = document.getElementsByName('rating');
@@ -25,7 +25,7 @@ function submitTestimonial(event) {
         }
     }
 
-    // 2. Validate
+    
     if (!nameInput.value.trim() || !feedbackInput.value.trim()) {
         alert('Please fill in both Name and Feedback.');
         return;
@@ -35,7 +35,7 @@ function submitTestimonial(event) {
         return;
     }
 
-    // 3. Create Object
+    
     const newTestimonial = {
         id: Date.now(),
         name: nameInput.value.trim(),
@@ -44,34 +44,34 @@ function submitTestimonial(event) {
         date: new Date().toLocaleDateString()
     };
 
-    // 4. Save to LocalStorage
+    
     saveTestimonial(newTestimonial);
 
-    // 5. Update UI
-    appendTestimonial(newTestimonial, true); // true = prepend to top
+    
+    appendTestimonial(newTestimonial, true); 
 
-    // 6. Reset Form
+    
     event.target.reset();
     alert('Thank you for your feedback!');
 }
 
-// Save to LocalStorage
+
 function saveTestimonial(testimonial) {
     let testimonials = getStoredTestimonials();
-    testimonials.unshift(testimonial); // Add to beginning
+    testimonials.unshift(testimonial); 
     localStorage.setItem(STORAGE_KEY, JSON.stringify(testimonials));
 }
 
-// Retrieve from LocalStorage
+
 function getStoredTestimonials() {
     const storedData = localStorage.getItem(STORAGE_KEY);
     return storedData ? JSON.parse(storedData) : [];
 }
 
-// Load and Display
+
 function loadTestimonials() {
     const listContainer = document.getElementById('testimonialsList');
-    listContainer.innerHTML = ''; // Clear loading text
+    listContainer.innerHTML = ''; 
 
     const testimonials = getStoredTestimonials();
 
@@ -83,11 +83,11 @@ function loadTestimonials() {
     testimonials.forEach(t => appendTestimonial(t, false));
 }
 
-// Create HTML Element
+
 function appendTestimonial(data, prepend) {
     const listContainer = document.getElementById('testimonialsList');
 
-    // Remove "No testimonials" message if it exists
+    
     if (listContainer.querySelector('p')) {
         listContainer.innerHTML = '';
     }
@@ -114,7 +114,7 @@ function appendTestimonial(data, prepend) {
     }
 }
 
-// Helper: Generate Star Icons
+
 function generateStars(rating) {
     let starsHtml = '';
     for (let i = 1; i <= 5; i++) {
@@ -127,7 +127,7 @@ function generateStars(rating) {
     return starsHtml;
 }
 
-// Helper: Escape HTML to prevent XSS
+
 function escapeHtml(text) {
     const div = document.createElement('div');
     div.innerText = text;

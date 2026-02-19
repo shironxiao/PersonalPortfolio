@@ -1,4 +1,4 @@
-/* ── 1400px ── */
+
 @media screen and (max-width: 1400px) {
   #projects {
     height: fit-content;
@@ -10,7 +10,7 @@
   }
 }
 
-/* ── 1200px: Switch desktop nav → hamburger nav ── */
+
 @media screen and (max-width: 1200px) {
   #desktop-nav {
     display: none;
@@ -98,7 +98,7 @@
   }
 }
 
-/* ── 900px: Tablet ── */
+
 @media screen and (max-width: 900px) {
   #hamburger-nav {
     padding: 0 1.5rem;
@@ -118,7 +118,7 @@
   }
 }
 
-/* ── 600px: Mobile ── */
+
 @media screen and (max-width: 600px) {
   #hamburger-nav {
     padding: 0 1rem;
@@ -178,7 +178,7 @@
   }
 }
 
-/* ── 400px: Small mobile ── */
+
 @media screen and (max-width: 400px) {
   #hamburger-nav {
     padding: 0 0.75rem;

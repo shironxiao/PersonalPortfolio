@@ -1,6 +1,4 @@
-/* =========================================================
-   THEME VARIABLES (DEFAULT = LIGHT MODE)
-   ========================================================= */
+
 :root {
   --bg: #FFFFFF;
   --text: #1F2937;
@@ -12,7 +10,7 @@
 
 
 
-/* MANUAL OVERRIDE - LIGHT */
+
 :root[data-theme="light"] {
   --bg: #FFFFFF;
   --text: #1F2937;
@@ -22,7 +20,7 @@
   --muted-text: #6B7280;
 }
 
-/* Make icons adapt to theme */
+
 .icon {
   cursor: pointer;
   height: 2rem;
@@ -32,9 +30,7 @@
 
 
 
-/* =========================================================
-   GENERAL (PRESERVING ORIGINAL LAYOUT)
-   ========================================================= */
+
 @font-face {
   font-family: "Anton";
   src: url("fonts/Anton-Regular.ttf") format("truetype");
@@ -55,14 +51,14 @@ p {
   color: var(--muted-text);
 }
 
-/* TRANSITION */
+
 
 a,
 .btn {
   transition: all 300ms ease;
 }
 
-/* DESKTOP NAV */
+
 
 nav,
 .nav-links {
@@ -75,7 +71,7 @@ nav {
   height: 10vh;
 }
 
-/* Sticky nav positioning */
+
 #desktop-nav {
   position: sticky;
   top: 0;
@@ -92,7 +88,7 @@ nav {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Hide nav when idle */
+
 #desktop-nav.hidden,
 #hamburger-nav.hidden {
   transform: translateY(-100%);
@@ -100,7 +96,7 @@ nav {
   pointer-events: none;
 }
 
-/* Show nav when active */
+
 #desktop-nav.visible,
 #hamburger-nav.visible {
   transform: translateY(0);
@@ -127,7 +123,7 @@ nav {
   text-decoration-color: var(--accent);
 }
 
-/* Active nav link indicator */
+
 .nav-links a.active {
   color: var(--accent);
   text-decoration: underline;
@@ -135,7 +131,7 @@ nav {
   text-decoration-color: var(--accent);
 }
 
-/* General link styles */
+
 a {
   color: var(--text);
   text-decoration: none;
@@ -158,7 +154,7 @@ a:hover {
   cursor: default;
 }
 
-/* THEME TOGGLE BUTTON */
+
 .theme-toggle {
   background: none;
   border: none;
@@ -208,7 +204,7 @@ a:hover {
   background: var(--text);
 }
 
-/* HAMBURGER MENU */
+
 
 #hamburger-nav {
   display: none;
@@ -288,7 +284,7 @@ a:hover {
   transform: none;
 }
 
-/* SECTIONS */
+
 
 section {
   padding-top: 4vh;
@@ -341,14 +337,14 @@ section {
   gap: 1rem;
 }
 
-/* ICONS */
+
 
 .icon {
   cursor: pointer;
   height: 2rem;
 }
 
-/* BUTTONS */
+
 
 .btn-container {
   display: flex;
@@ -397,11 +393,11 @@ section {
 }
 
 
-/* Responsive adjustments for smaller screens to prevent overlapping */
+
 @media (max-width: 900px) {
   section {
     height: auto;
-    /* let content determine height on small screens */
+    
     margin: 0 2rem;
     padding-top: 3vh;
   }
@@ -444,7 +440,7 @@ section {
 
 
 
-/* SECTIONS */
+
 
 section {
   padding-top: 4vh;
@@ -458,7 +454,7 @@ section {
   display: flex;
 }
 
-/* About Containers */
+
 .about-containers {
   gap: 2rem;
   margin: 2rem 0;
@@ -489,9 +485,9 @@ section {
   flex-direction: column;
 }
 
-/* PROJECTS SECTION */
 
-/* PROJECTS SECTION */
+
+
 
 #projects {
   position: relative;
@@ -528,7 +524,7 @@ section {
 .project-image {
   width: 100%;
   height: 250px;
-  /* Reduced height for grid cards */
+  
   overflow: hidden;
   background: linear-gradient(135deg, var(--accent), var(--card-bg));
   position: relative;
@@ -547,7 +543,7 @@ section {
 
 .project-content {
   padding: 1.5rem;
-  /* Reduced padding */
+  
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -556,7 +552,7 @@ section {
 
 .project-title {
   font-size: 1.5rem;
-  /* Adjusted font size */
+  
   font-weight: 700;
   color: var(--text);
   margin: 0;
@@ -569,7 +565,7 @@ section {
   color: var(--muted-text);
   margin: 0;
   flex-grow: 1;
-  /* Pushes buttons to bottom */
+  
 }
 
 .tech-stack {
@@ -582,7 +578,7 @@ section {
 .tech-item {
   display: flex;
   align-items: center;
-  /* Helper for simpler tech items */
+  
   gap: 0.5rem;
   font-size: 0.9rem;
   color: var(--text);
@@ -596,12 +592,12 @@ section {
   font-size: 1.2rem;
 }
 
-/* Project Buttons */
+
 .project-buttons-container {
   display: flex;
   gap: 1rem;
   margin-top: auto;
-  /* Ensures buttons stick to bottom if content varies */
+  
 }
 
 .project-btn {
@@ -643,7 +639,7 @@ section {
 }
 
 
-/* Technology Icon Colors - Simplified */
+
 .fa-html5 {
   color: #E34F26;
 }
@@ -667,7 +663,7 @@ section {
   color: var(--text);
 }
 
-/* Responsive Design */
+
 @media (max-width: 1200px) {
   .project-image {
     height: 350px;
@@ -747,7 +743,7 @@ section {
   }
 }
 
-/* FOOTER SECTION */
+
 
 footer {
   height: max-content;
@@ -772,7 +768,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* Center items in column */
+  
   gap: 1rem;
 }
 
@@ -813,7 +809,7 @@ footer {
   color: var(--muted-text);
 }
 
-/* Responsive Footer */
+
 @media (max-width: 600px) {
   .footer-content {
     flex-direction: column;
@@ -822,7 +818,7 @@ footer {
   }
 }
 
-/* IMAGE OVERLAY AND FULLSCREEN MODAL */
+
 
 .project-image {
   position: relative;
@@ -860,7 +856,7 @@ footer {
   font-weight: 500;
 }
 
-/* Fullscreen Modal */
+
 .image-modal {
   display: none;
   position: fixed;
@@ -910,7 +906,7 @@ footer {
 }
 
 
-/* Mobile responsive */
+
 @media (max-width: 600px) {
   .modal-close {
     top: 1rem;

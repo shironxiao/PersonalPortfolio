@@ -1,8 +1,6 @@
-/* =====================================================
-   RESPONSIVE - mediaquaries.css
-   ===================================================== */
 
-/* ── 1400px: Large tablet / small desktop ── */
+
+
 @media screen and (max-width: 1400px) {
   #profile {
     height: fit-content;
@@ -19,10 +17,10 @@
   }
 }
 
-/* ── 1200px: Switch desktop nav → hamburger nav ── */
+
 @media screen and (max-width: 1200px) {
 
-  /* Hide desktop nav, show hamburger */
+  
   #desktop-nav {
     display: none;
   }
@@ -39,28 +37,27 @@
     margin: 0;
     width: 100%;
     box-sizing: border-box;
-    /* Make nav the positioning parent for the dropdown */
+    
     overflow: visible;
   }
 
-  /* Remove relative positioning from hamburger-menu so dropdown
-     positions relative to the nav bar instead */
+  
   .hamburger-menu {
     position: static;
   }
 
-  /* Logo inside hamburger nav */
+  
   #hamburger-nav .logo {
     font-size: 1.75rem;
   }
 
-  /* Theme toggle positioning */
+  
   #hamburger-nav .theme-toggle {
     margin-left: auto;
     margin-right: 1rem;
   }
 
-  /* Hamburger dropdown — full-width below the nav bar */
+  
   .menu-links {
     position: fixed;
     top: 10vh;
@@ -101,7 +98,7 @@
     font-weight: 600;
   }
 
-  /* Page layout */
+  
   #experience,
   .experience-details-container {
     margin-top: 2rem;
@@ -168,7 +165,7 @@
   }
 }
 
-/* ── 900px: Tablet ── */
+
 @media screen and (max-width: 900px) {
   #hamburger-nav {
     padding: 0 1.5rem;
@@ -193,10 +190,10 @@
   }
 }
 
-/* ── 600px: Mobile ── */
+
 @media screen and (max-width: 600px) {
 
-  /* Nav */
+  
   #hamburger-nav {
     padding: 0 1rem;
     height: 8vh;
@@ -237,7 +234,7 @@
     text-align: center;
   }
 
-  /* General layout */
+  
   #contact,
   footer {
     height: fit-content;
@@ -264,7 +261,7 @@
     margin: 0 auto;
   }
 
-  /* Footer nav — stack links vertically on mobile */
+  
   .footer-nav {
     flex-direction: column;
     align-items: center;
@@ -352,13 +349,13 @@
     color: var(--muted-text);
   }
 
-  /* Footer */
+  
   footer .copyright {
     margin-bottom: 1rem;
   }
 }
 
-/* ── 400px: Small mobile ── */
+
 @media screen and (max-width: 400px) {
   #hamburger-nav {
     padding: 0 0.75rem;
