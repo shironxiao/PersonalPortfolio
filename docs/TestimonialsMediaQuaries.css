@@ -1,11 +1,9 @@
-
 @media screen and (max-width: 1400px) {
     #testimonials {
         height: fit-content;
         margin-bottom: 6rem;
     }
 }
-
 
 @media screen and (max-width: 1200px) {
     #desktop-nav {
@@ -95,7 +93,6 @@
     }
 }
 
-
 @media screen and (max-width: 900px) {
     #hamburger-nav {
         padding: 0 1.5rem;
@@ -114,7 +111,6 @@
         margin: 0 4%;
     }
 }
-
 
 @media screen and (max-width: 600px) {
     #hamburger-nav {
@@ -186,7 +182,6 @@
         margin-bottom: 1rem;
     }
 }
-
 
 @media screen and (max-width: 400px) {
     #hamburger-nav {

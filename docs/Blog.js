@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', () => {
     fetchBlogPosts();
 });
@@ -15,7 +13,6 @@ async function fetchBlogPosts() {
             throw new Error('Network response was not ok');
         }
         const articles = await response.json();
-
         
         blogContainer.innerHTML = '';
 
@@ -61,11 +58,8 @@ function createBlogCard(article) {
     const card = document.createElement('div');
     card.className = 'blog-card';
 
-    
-    
     const coverImage = article.cover_image || article.social_image || 'https://placehold.co/600x400?text=No+Image+Available';
 
-    
     const date = new Date(article.published_at).toLocaleDateString('en-US', {
         year: 'numeric',
         month: 'long',

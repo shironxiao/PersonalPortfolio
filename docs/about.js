@@ -47,20 +47,17 @@ function calculateTopLanguages(repos) {
         }
     });
 
-    
     const langArray = Object.keys(langCount).map(lang => ({
         name: lang,
         count: langCount[lang],
         percentage: ((langCount[lang] / total) * 100).toFixed(1)
     })).sort((a, b) => b.count - a.count);
 
-    
     return langArray.slice(0, 5);
 }
 
 function renderGitHubSection(profile, languages) {
     const container = document.getElementById('github-content');
-
     
     const joinedDate = new Date(profile.created_at).toLocaleDateString('en-US', {
         year: 'numeric',

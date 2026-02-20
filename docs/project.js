@@ -1,4 +1,3 @@
-
 function openImageFullscreen(img) {
     const modal = document.getElementById('imageModal');
     const modalImg = document.getElementById('modalImage');
@@ -14,7 +13,6 @@ function closeImageFullscreen() {
         modal.style.display = 'none';
     }
 }
-
 
 document.addEventListener('DOMContentLoaded', function () {
     const modal = document.getElementById('imageModal');

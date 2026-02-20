@@ -8,9 +8,6 @@
   --muted-text: #6B7280;
 }
 
-
-
-
 :root[data-theme="light"] {
   --bg: #FFFFFF;
   --text: #1F2937;
@@ -20,16 +17,12 @@
   --muted-text: #6B7280;
 }
 
-
 .icon {
   cursor: pointer;
   height: 2rem;
   filter: invert(0);
   transition: filter 0.3s ease;
 }
-
-
-
 
 @font-face {
   font-family: "Anton";
@@ -51,14 +44,10 @@ p {
   color: var(--muted-text);
 }
 
-
-
 a,
 .btn {
   transition: all 300ms ease;
 }
-
-
 
 nav,
 .nav-links {
@@ -70,7 +59,6 @@ nav {
   align-items: center;
   height: 10vh;
 }
-
 
 #desktop-nav {
   position: sticky;
@@ -88,14 +76,12 @@ nav {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-
 #desktop-nav.hidden,
 #hamburger-nav.hidden {
   transform: translateY(-100%);
   opacity: 0;
   pointer-events: none;
 }
-
 
 #desktop-nav.visible,
 #hamburger-nav.visible {
@@ -123,14 +109,12 @@ nav {
   text-decoration-color: var(--accent);
 }
 
-
 .nav-links a.active {
   color: var(--accent);
   text-decoration: underline;
   text-underline-offset: 1rem;
   text-decoration-color: var(--accent);
 }
-
 
 a {
   color: var(--text);
@@ -153,7 +137,6 @@ a:hover {
 .logo:hover {
   cursor: default;
 }
-
 
 .theme-toggle {
   background: none;
@@ -205,8 +188,6 @@ a:hover {
   background: var(--accent);
   color: var(--bg);
 }
-
-
 
 #hamburger-nav {
   display: none;
@@ -286,8 +267,6 @@ a:hover {
   transform: none;
 }
 
-
-
 section {
   padding-top: 2vh;
   height: 80vh;
@@ -329,7 +308,6 @@ section {
   margin-bottom: 3rem;
 }
 
-
 .section-container {
   display: flex;
   gap: 3rem;
@@ -361,7 +339,6 @@ section {
   display: block;
 }
 
-
 .about-details-container {
   flex: 1;
   display: flex;
@@ -389,7 +366,6 @@ section {
   margin-top: 1.5rem;
 }
 
-
 #personal-touch {
   position: relative;
 }
@@ -403,7 +379,6 @@ section {
   width: 380px;
   border-radius: 1.5rem;
 }
-
 
 section[id="What i do"] {
   display: flex;
@@ -431,8 +406,6 @@ section[id="What i do"] .intro-text-container .section__text__p2 {
   line-height: 1.65;
   margin-bottom: 1rem;
 }
-
-
 
 footer {
   height: max-content;
@@ -498,7 +471,6 @@ footer {
   color: var(--muted-text);
 }
 
-
 @media (max-width: 600px) {
   .footer-content {
     flex-direction: column;
@@ -506,7 +478,6 @@ footer {
     align-items: center;
   }
 }
-
 
 @media (max-width: 900px) {
   section[id="What i do"] {
@@ -525,7 +496,6 @@ footer {
     font-size: 1.5rem;
   }
 
-  
   #personal-touch .section-container,
   #personal-touch .personal-touch-container {
     display: flex !important;
@@ -548,14 +518,12 @@ footer {
     font-size: 1.25rem;
   }
 
-  
   .personal-touch-pic {
     width: 220px;
     height: 220px;
     margin: 0;
   }
 }
-
 
 @media screen and (max-width: 1200px) {
   #desktop-nav {
@@ -752,10 +720,6 @@ footer {
   font-weight: 600;
 }
 
-
-
-
-
 .gh-details {
   display: flex;
   gap: 1.5rem;
@@ -852,9 +816,6 @@ footer {
   border-radius: 5px;
   transition: width 1s ease-in-out;
 }
-
-
-
 
 @media screen and (max-width: 768px) {
   .github-profile-header {

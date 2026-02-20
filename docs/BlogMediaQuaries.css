@@ -1,13 +1,9 @@
-
-
-
 @media screen and (max-width: 1400px) {
     #blog {
         height: fit-content;
         margin-bottom: 6rem;
     }
 }
-
 
 @media screen and (max-width: 1200px) {
     #desktop-nav {
@@ -92,7 +88,6 @@
     }
 }
 
-
 @media screen and (max-width: 900px) {
     #hamburger-nav {
         padding: 0 1.5rem;
@@ -108,14 +103,12 @@
     }
 }
 
-
 @media screen and (max-width: 768px) {
     .blog-container {
         grid-template-columns: 1fr;
         max-width: 500px;
     }
 }
-
 
 @media screen and (max-width: 600px) {
     #hamburger-nav {
@@ -187,7 +180,6 @@
         margin-bottom: 1rem;
     }
 }
-
 
 @media screen and (max-width: 400px) {
     #hamburger-nav {

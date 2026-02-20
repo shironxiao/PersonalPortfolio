@@ -1,4 +1,3 @@
-
 :root {
   --bg: #FFFFFF;
   --text: #1F2937;
@@ -8,18 +7,12 @@
   --muted-text: #6B7280;
 }
 
-
-
-
 .icon {
   cursor: pointer;
   height: 2rem;
   filter: invert(0);
   transition: filter 0.3s ease;
 }
-
-
-
 
 @font-face {
   font-family: "Anton";
@@ -41,14 +34,10 @@ p {
   color: var(--muted-text);
 }
 
-
-
 a,
 .btn {
   transition: all 300ms ease;
 }
-
-
 
 nav,
 .nav-links {
@@ -61,7 +50,6 @@ nav {
   height: 10vh;
   margin: 0 5rem;
 }
-
 
 #desktop-nav {
   position: sticky;
@@ -79,14 +67,12 @@ nav {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-
 #desktop-nav.hidden,
 #hamburger-nav.hidden {
   transform: translateY(-100%);
   opacity: 0;
   pointer-events: none;
 }
-
 
 #desktop-nav.visible,
 #hamburger-nav.visible {
@@ -114,14 +100,12 @@ nav {
   text-decoration-color: var(--accent);
 }
 
-
 .nav-links a.active {
   color: var(--accent);
   text-decoration: underline;
   text-underline-offset: 1rem;
   text-decoration-color: var(--accent);
 }
-
 
 a {
   color: var(--text);
@@ -144,9 +128,6 @@ a:hover {
 .logo:hover {
   cursor: default;
 }
-
-
-
 
 .btn-color-1,
 .btn-color-2 {
@@ -178,7 +159,6 @@ a:hover {
   color: var(--bg);
   transform: translateY(-2px);
 }
-
 
 
 #hamburger-nav {
@@ -259,8 +239,6 @@ a:hover {
   transform: none;
 }
 
-
-
 section {
   padding-top: 4vh;
   min-height: fit-content;
@@ -271,8 +249,6 @@ section {
 .section-container {
   display: flex;
 }
-
-
 
 #profile {
   display: flex;
@@ -310,7 +286,6 @@ section {
   flex-shrink: 0;
   
 }
-
 
 .section__pic-container img,
 .about-pic {
@@ -360,7 +335,6 @@ section {
   
 }
 
-
 .primary-title {
   font-size: 1.75rem;
   font-weight: 600;
@@ -368,7 +342,6 @@ section {
   margin-bottom: 0.25rem;
   line-height: 1.2;
 }
-
 
 .secondary-title {
   font-size: 1.1rem;
@@ -378,7 +351,6 @@ section {
   margin-bottom: 1.5rem;
   
 }
-
 
 .intro-text {
   margin-top: 0;
@@ -398,7 +370,6 @@ section {
   
 }
 
-
 .btn-container {
   display: flex;
   justify-content: flex-start;
@@ -414,11 +385,9 @@ section {
   border-radius: 2rem;
 }
 
-
 .btn-container {
   gap: 1rem;
 }
-
 
 @media (max-width: 900px) {
   section {
@@ -463,11 +432,6 @@ section {
     font-size: 2.25rem;
   }
 }
-
-
-
-
-
 
 footer {
   padding: 2.5rem 1rem 1.5rem;
@@ -550,13 +514,11 @@ footer {
   margin: 0.25rem 0 0;
 }
 
-
 @media (max-width: 600px) {
   .footer-nav {
     gap: 0.4rem 1rem;
   }
 }
-
 
 .whatido-section {
   margin: 0 10rem;
@@ -651,9 +613,6 @@ footer {
   margin: 0;
 }
 
-
-
-
 .worktogether-section {
   margin: 0 10rem;
   padding: 4rem 0 5rem;
@@ -747,7 +706,6 @@ footer {
   transform: translateY(-2px);
   text-decoration: none;
 }
-
 
 @media (max-width: 1100px) {
   .whatido-grid {

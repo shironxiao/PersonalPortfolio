@@ -1,4 +1,3 @@
-
 function toggleMenu() {
     const menu = document.querySelector('.menu-links');
     const icon = document.querySelector('.hamburger-icon');
@@ -9,9 +8,6 @@ function toggleMenu() {
     const isOpen = menu.classList.contains('open');
     icon.setAttribute('aria-expanded', isOpen);
 }
-
-
-
 
 document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {
@@ -25,9 +21,6 @@ document.addEventListener('keydown', function (e) {
         }
     }
 });
-
-
-
 
 function updateActiveNavLink() {
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
@@ -55,9 +48,7 @@ function updateActiveNavLink() {
     });
 }
 
-
 document.addEventListener('DOMContentLoaded', updateActiveNavLink);
-
 
 document.addEventListener('DOMContentLoaded', function () {
     const animationButton = document.getElementById('animation-toggle');
@@ -74,7 +65,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-
 let navHideTimeout;
 const IDLE_TIME = 10000; 
 const desktopNav = document.getElementById('desktop-nav');
@@ -86,9 +76,7 @@ function showNav() {
     hamburgerNav.classList.remove('hidden');
     hamburgerNav.classList.add('visible');
 
-    
     clearTimeout(navHideTimeout);
-
     
     navHideTimeout = setTimeout(() => {
         desktopNav.classList.remove('visible');
@@ -98,26 +86,16 @@ function showNav() {
     }, IDLE_TIME);
 }
 
-
 document.addEventListener('mousemove', showNav);
-
-
 document.addEventListener('scroll', showNav);
-
-
 document.addEventListener('keydown', showNav);
-
-
 document.addEventListener('touchstart', showNav);
-
 
 window.addEventListener('load', () => {
     desktopNav.classList.add('visible');
     hamburgerNav.classList.add('visible');
     showNav();
 });
-
-
 
 document.addEventListener('DOMContentLoaded', function () {
     const contactForm = document.getElementById('contactForm');
@@ -127,13 +105,11 @@ document.addEventListener('DOMContentLoaded', function () {
         contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
 
-            
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const subject = document.getElementById('subject').value;
             const message = document.getElementById('message').value;
 
-            
             if (!name || !email || !subject || !message) {
                 alert('Please fill in all fields.');
                 return;
@@ -144,13 +120,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
 
-            
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalBtnText = submitBtn.innerHTML;
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitBtn.disabled = true;
 
-            
             const serviceID = 'service_8b50d5q';
             const templateID = 'template_xbpoxli';
 
@@ -158,13 +132,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 .then(() => {
                     
                     contactForm.style.display = 'none';
-
                     
                     successMessage.style.display = 'block';
 
                     console.log('SUCCESS!');
 
-                    
                     setTimeout(function () {
                         contactForm.reset();
                         contactForm.style.display = 'flex';
@@ -181,8 +153,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-
-
 
 function openImageFullscreen(imgElement) {
     const modal = document.getElementById('imageModal');
@@ -205,7 +175,6 @@ function closeImageFullscreen() {
     }
 }
 
-
 document.addEventListener('DOMContentLoaded', function () {
     const modal = document.getElementById('imageModal');
 
@@ -218,13 +187,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-
 document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {
         closeImageFullscreen();
     }
 });
-
 
 function validateEmail(email) {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
